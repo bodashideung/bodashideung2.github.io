@@ -22,17 +22,18 @@
     height: 100vh;
 }
 
-.page-one{
-    width: 100%;
-    max-height: 100vh;
-    font-family: var(--ff-header);
-   
+section{
+    scroll-snap-align: start;
+    position: relative;
+}
+
+
 
 header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    
    
     h1{
         color: var(--color-text);
@@ -114,29 +115,39 @@ nav{
     }
 }
 
-
+.page-one{
+    width: 100%;
+    height: 100vh;
+    font-family: var(--ff-header);
+    position: relative;
+   
     .hero{
-        min-height: 100vh;
-        // margin-bottom: 3em;
+       height: 100vh;
+        .hero-image{
+            width: 100%;
 
-        img{
-            position: relative;
-            max-width: 60%;
-            max-height: 50%;
-            background-size: cover;
-            object-fit: cover;
-            right: -10.5em;
-            top: -10em;
-            z-index: -2;
-            animation: introLoad 1s ease-in-out;
+            img{
+                position: absolute;
+                top: 15em;
+                right: 0;
+                z-index: -2;
+                max-width: 60%;
+                max-height: 50%;
+                background-size: cover;
+                object-fit: cover;
+                animation: introLoad 1s ease-in-out;
+            }
+        
         }
-
     
         .hero-title{
             width: 100%;
-            padding: 5em  2em 0 2em;
             
             h1{
+                position: absolute;
+                top: 5em;
+                left: 1em;
+                right: 1em;
                 font-weight: bold;
                 font-size: 2rem;
                 line-height: -.5em;
@@ -145,11 +156,13 @@ nav{
 
             }
 
-            p{
+            p{ 
+                position: absolute;
+                top: 26em;
+                left: 2.3em;
                 font-family: var(--ff-pg);
                 color: var(--color-secondary);
                 font-size: .9em;
-                padding-top: 1em;
                 opacity: 0;
                 animation: moveText 1.5s ease-in-out .5s forwards ;
 
@@ -157,30 +170,27 @@ nav{
         }
 
         .cta-scroll{
+            position: absolute;
             writing-mode: vertical-rl;
-            position: relative;
             text-transform: uppercase;
             font-size: .7em;
             letter-spacing: .3em;
             font-family: var(--ff-pg);
             color: var(--color-secondary);
+            z-index: -1;
             bottom: 1em;
-            left: 2.8em;
-            top: -20em;
+            left: 2.2em;
             
         }
     }
-}
+
 
 .nav-social-media{
     display: flex;
-    // grid-template-columns: 1fr 1fr 1fr;
     gap:1em;
-    position: relative;
-    bottom: 0em;
-    right: 0;
-    left: 16.5em;
-    top:-18em;
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
 
     svg{
         width: 20px;
@@ -188,74 +198,74 @@ nav{
     }
 }
 
+}
+
 
 
 .page-two{
     max-width: 100%;
-    // min-height: 100vh;
-    padding-top: 2em;
+    height: 100vh;
+    position: relative;
+
+    .content{
+        height: 100vh;
 
         .head{
-            margin-bottom: 10em;
-            padding: 2em;
             line-height: 1.5em;
-            max-height: 100vh;
 
             h1{
+                position: absolute;
+                top: 2em;
+                left: 1em;
                 text-transform: uppercase;
                 font-family: var(--ff-header);
                 font-size: 2rem;
-                padding-bottom: .8em;
+
+              
             }
 
             p{
+                position: absolute;
+                top: 6.8em;
+                left: 2em;
+                right: 1.9em;
                 font-family: var(--ff-pg);
                 font-size: 1em;
                 color: var(--color-secondary);
             }
         }
-}
 
 
-.list-thumb{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: var(--color-primary);
-    margin-top: 10em;
+        .list-thumb{
+            width: 100%;
+            // margin-top: 10em;
+    
+            .thumb{
+                    
+                a{
+                    display: block;
+    
+                    img{
+                        position: absolute;
+                        bottom: 6em;
+                        left: 1em;
+                        max-width: 70%;
+                        padding-left: 1em;
+                        object-fit: cover;
+                        background-size: cover;
+                    }
 
-    .thumb{
-     width: 100%;
-
-        a{
-            display: block;
-            position: absolute;
-            top: -8em;
-            left: 1em;
-           
-           
-            img{
-                max-width: 70%;
-                // max-height: ;
-                padding-left: 1em;
-                object-fit: cover;
-                background-size: cover;
+                }
+    
+    
             }
+    
         }
 
 
+
     }
-
 }
-
-section{
-    scroll-snap-align: 
-    start;
-}
-
-
-
-
 
 
 
