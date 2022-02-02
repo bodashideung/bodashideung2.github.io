@@ -14,6 +14,10 @@
   --ff-pg: "fira sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -92,125 +96,105 @@ nav ul li {
   fill: white;
 }
 
-.page-one {
+.hero {
   width: 100%;
-  height: 100vh;
-  font-family: var(--ff-header);
+}
+.hero .container {
+  width: 100%;
+}
+.hero .container .hero-image {
   position: relative;
+  min-width: 100vw;
+  min-height: 50%;
 }
-.page-one .hero {
-  height: 100vh;
-}
-.page-one .hero .hero-image {
-  width: 100%;
-}
-.page-one .hero .hero-image img {
+.hero .container .hero-image img {
   position: absolute;
-  top: 15em;
-  right: 0;
-  z-index: -2;
-  max-width: 60%;
-  max-height: 50%;
-  background-size: cover;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-animation: introLoad 1s ease-in-out;
-          animation: introLoad 1s ease-in-out;
-}
-.page-one .hero .hero-title {
-  width: 100%;
-}
-.page-one .hero .hero-title h1 {
-  position: absolute;
-  top: 5em;
-  left: 1em;
-  right: 1em;
-  font-weight: bold;
-  font-size: 2rem;
-  line-height: -0.5em;
-  opacity: 0;
-  -webkit-animation: moveText 1.5s ease-in-out 0.5s forwards;
-          animation: moveText 1.5s ease-in-out 0.5s forwards;
-}
-.page-one .hero .hero-title p {
-  position: absolute;
-  top: 26em;
-  left: 2.3em;
-  font-family: var(--ff-pg);
-  color: var(--color-secondary);
-  font-size: 0.9em;
-  opacity: 0;
-  -webkit-animation: moveText 1.5s ease-in-out 0.5s forwards;
-          animation: moveText 1.5s ease-in-out 0.5s forwards;
-}
-.page-one .hero .cta-scroll {
-  position: absolute;
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
-  text-transform: uppercase;
-  font-size: 0.7em;
-  letter-spacing: 0.3em;
-  font-family: var(--ff-pg);
-  color: var(--color-secondary);
   z-index: -1;
-  bottom: 2em;
-  left: 2.2em;
+  width: 60%;
+  background-size: cover;
+  right: 0;
+  top: 9em;
 }
-.page-one .nav-social-media {
-  display: flex;
-  gap: 1em;
-  position: absolute;
-  right: 2em;
-  bottom: 3em;
+.hero .container .hero-title {
+  max-width: 100vw;
+  max-height: 100vh;
+  padding: 6em 2em;
 }
-.page-one .nav-social-media svg {
-  width: 20px;
+.hero .container .hero-title h1 {
+  font-family: var(--ff-header);
+  font-size: clamp(2em, 10vw, 5em);
+  font-weight: bold;
+  line-height: 1.1em;
   padding-bottom: 0.5em;
 }
-
-.page-two {
-  max-width: 100%;
-  height: 100vh;
-  position: relative;
-}
-.page-two .content {
-  height: 100vh;
-}
-.page-two .content .head {
-  line-height: 1.5em;
-}
-.page-two .content .head h1 {
-  position: absolute;
-  top: 2em;
-  left: 1em;
-  text-transform: uppercase;
-  font-family: var(--ff-header);
-  font-size: 2rem;
-}
-.page-two .content .head p {
-  position: absolute;
-  top: 6.8em;
-  left: 2em;
-  right: 1.9em;
+.hero .container .hero-title p {
   font-family: var(--ff-pg);
   font-size: 1em;
   color: var(--color-secondary);
 }
-.page-two .content .list-thumb {
+.hero .container .nav-social-media {
   width: 100%;
+  display: flex;
+  gap: 0.8em;
+  position: relative;
 }
-.page-two .content .list-thumb .thumb a {
-  display: block;
-}
-.page-two .content .list-thumb .thumb a img {
+.hero .container .nav-social-media .link-socmed {
+  width: 1.4em;
+  height: 1.4em;
   position: absolute;
-  bottom: 6em;
-  left: 1em;
-  max-width: 70%;
-  padding-left: 1em;
+  bottom: 4.5em;
+}
+.hero .container .nav-social-media .gmail {
+  right: 2em;
+}
+.hero .container .nav-social-media .twitter {
+  right: 4.5em;
+}
+.hero .container .nav-social-media .instagram {
+  right: 7em;
+}
+.hero .container .cta-scroll {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  padding: 2.8em;
+  font-family: var(--ff-pg);
+  text-transform: uppercase;
+  font-size: 0.6em;
+  letter-spacing: 0.8em;
+}
+
+.container .content-title {
+  padding: 4em 2em 8em 2em;
+}
+.container .content-title h1 {
+  font-family: var(--ff-header);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 0.8em;
+}
+.container .content-title p {
+  font-family: var(--ff-pg);
+  color: var(--color-secondary);
+  line-height: 1.6em;
+}
+.container .list-thumb {
+  gap: 1.5em;
+  padding: 2em 2em;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-primary);
+}
+.container .list-thumb .thumb {
+  width: 100%;
+  height: 28em;
+  background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
-  background-size: cover;
+  overflow: hidden;
+}
+.container .list-thumb .thumb a img {
+  height: 25em;
 }
 
 @-webkit-keyframes introLoad {
