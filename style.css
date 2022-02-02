@@ -142,29 +142,30 @@ nav ul li {
   width: 1.4em;
   height: 1.4em;
   position: absolute;
-  bottom: 4.5em;
+  bottom: 3em;
 }
 .hero .container .nav-social-media .gmail {
-  right: 2em;
+  right: 1.5em;
 }
 .hero .container .nav-social-media .twitter {
-  right: 4.5em;
+  right: 4em;
 }
 .hero .container .nav-social-media .instagram {
-  right: 7em;
+  right: 6.5em;
 }
 .hero .container .cta-scroll {
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
-  padding: 2.8em;
+  padding: 0 0 0 2.8em;
   font-family: var(--ff-pg);
   text-transform: uppercase;
   font-size: 0.6em;
   letter-spacing: 0.8em;
+  color: var(--color-secondary);
 }
 
 .container .content-title {
-  padding: 4em 2em 8em 2em;
+  padding: 4em 2em 9em 2em;
 }
 .container .content-title h1 {
   font-family: var(--ff-header);
@@ -179,7 +180,7 @@ nav ul li {
   line-height: 1.6em;
 }
 .container .list-thumb {
-  gap: 1.5em;
+  position: relative;
   padding: 2em 2em;
   width: 100%;
   min-height: 100vh;
@@ -188,6 +189,8 @@ nav ul li {
 .container .list-thumb .thumb {
   width: 100%;
   height: 28em;
+  position: absolute;
+  padding-bottom: 6em;
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
@@ -195,6 +198,41 @@ nav ul li {
 }
 .container .list-thumb .thumb a img {
   height: 25em;
+}
+.container .list-thumb .thumb p {
+  font-family: var(--ff-pg);
+  font-size: 0.5em;
+  color: var(--color-text);
+  padding-top: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+.container .list-thumb .thumb hr {
+  width: 40%;
+  margin-top: 1em;
+}
+.container .list-thumb .first {
+  top: -5em;
+}
+.container .list-thumb .second {
+  top: 28em;
+}
+.container .list-thumb .third {
+  top: 55em;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--color-primary);
+  padding: 8em;
+}
+footer p {
+  color: var(--color-text);
+  font-family: var(--ff-pg);
+  font-size: 0.5em;
+  text-align: center;
+  position: relative;
+  bottom: -8em;
 }
 
 @-webkit-keyframes introLoad {

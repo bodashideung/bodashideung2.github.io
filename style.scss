@@ -175,30 +175,31 @@ nav{
                 width: 1.4em;
                 height: 1.4em;
                 position: absolute;
-                bottom: 4.5em;
+                bottom: 3em;
             }
 
             .gmail{
-                right: 2em;
+                right: 1.5em;
             }
 
             .twitter{
-                right: 4.5em;
+                right: 4em;
             }
 
             .instagram{
-                right: 7em;
+                right: 6.5em;
             }
 
         }
 
         .cta-scroll{
             writing-mode: vertical-rl;
-            padding: 2.8em;
+            padding:0 0 0 2.8em;
             font-family: var(--ff-pg);
             text-transform: uppercase;
             font-size: .6em;
             letter-spacing: .8em;
+            color: var(--color-secondary);
         }
     }
 
@@ -208,7 +209,7 @@ nav{
 .container{
 
     .content-title{
-        padding: 4em 2em 8em 2em;        
+        padding: 4em 2em 9em 2em;        
 
 
         h1{
@@ -228,7 +229,8 @@ nav{
 
     .list-thumb{
         // display: flex;
-        gap: 1.5em;
+        // gap: 1.5em;
+        position: relative;
         padding: 2em 2em;
         width: 100%;
         min-height: 100vh;
@@ -237,20 +239,63 @@ nav{
         .thumb{
             width: 100%;
             height: 28em;
-            // padding-bottom: 2em;
+            position: absolute;
+            padding-bottom: 6em;
             background-size: cover;
             object-fit: cover;
             overflow: hidden;
 
             a{
+
                 img{
                     height: 25em;
                 }
             }
+
+            p{
+                 font-family: var(--ff-pg);
+                font-size: .5em;
+                color: var(--color-text);
+                padding-top: 2em;
+                text-transform: uppercase;
+                letter-spacing: .3em;
+            }
+
+            hr{
+                width: 40%;
+                margin-top: 1em;
+            }
+        }
+
+        .first{
+            top: -5em;
+        }
+
+        .second{
+            top: 28em;
+        }
+
+        .third{
+            top: 55em;
         }
     }
 
 
+}
+
+footer{
+    width: 100%;
+    background-color: var(--color-primary);
+    padding: 8em;
+
+    p{
+        color: var(--color-text);
+        font-family: var(--ff-pg);
+        font-size: .5em;
+        text-align: center;
+        position: relative;
+        bottom: -8em;
+    }
 }
 
 
