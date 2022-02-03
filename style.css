@@ -22,8 +22,8 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  -webkit-animation: introHead 1s ease-in-out forwards;
-          animation: introHead 1s ease-in-out forwards;
+  -webkit-animation: introHead 2s ease-in-out forwards;
+          animation: introHead 2s ease-in-out forwards;
   opacity: 0;
 }
 header h1 {
@@ -198,7 +198,7 @@ nav ul li {
 .container .list-thumb {
   position: relative;
   width: 100%;
-  min-height: 130vh;
+  min-height: 132.8vh;
   background: var(--color-primary);
   display: flex;
   justify-content: center;
@@ -247,6 +247,9 @@ footer {
   padding: 10em 0 0 0;
   position: relative;
   z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer p {
   color: var(--color-text);
@@ -254,10 +257,32 @@ footer p {
   font-size: 0.5em;
   text-align: center;
   bottom: 5em;
-  padding-bottom: 5em;
-  padding-left: 12em;
-  padding-right: 10em;
+  padding-bottom: 1em;
+  padding-left: 11em;
+  padding-right: 11em;
   position: absolute;
+}
+footer .nav-social-media {
+  width: 100%;
+  display: flex;
+  gap: 0.8em;
+  padding: 0 11em 4em 11em;
+}
+footer .nav-social-media .link-socmed {
+  width: 1.4em;
+  height: 1.4em;
+}
+footer .nav-social-media svg path {
+  fill: white;
+}
+footer .nav-social-media .gmail {
+  right: 8.5em;
+}
+footer .nav-social-media .twitter {
+  right: 11em;
+}
+footer .nav-social-media .instagram {
+  right: 13.5em;
 }
 
 .cta {

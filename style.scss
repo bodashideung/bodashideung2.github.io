@@ -37,7 +37,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    animation: introHead 1s ease-in-out forwards;
+    animation: introHead 2s ease-in-out forwards;
     opacity: 0;
     
    
@@ -242,7 +242,7 @@ nav{
     .list-thumb{
         position: relative;
         width: 100%;
-        min-height: 130vh;
+        min-height: 132.8vh;
         background: var(--color-primary);
         display: flex;
         justify-content: center;
@@ -304,6 +304,9 @@ footer{
     padding: 10em 0 0 0;
     position: relative;
     z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     p{
         color: var(--color-text);
@@ -311,19 +314,48 @@ footer{
         font-size: .5em;
         text-align: center;
         bottom: 5em;
-        padding-bottom:5em;
-        padding-left: 12em;
-        padding-right:10em;
+        padding-bottom:1em;
+        padding-left: 11em;
+        padding-right:11em;
         position: absolute;
         
         
+    }
+
+    .nav-social-media{
+        width: 100%;
+        display: flex;
+        gap: .8em;
+        padding: 0 11em 4em 11em;
+
+
+        .link-socmed{
+            width: 1.4em;
+            height: 1.4em;
+        }
+
+
+        svg path{
+            fill: white;
+        }
+
+        .gmail{
+            right: 8.5em;
+        }
+
+        .twitter{
+            right: 11em;
+        }
+
+        .instagram{
+            right: 13.5em;
+        }
+
     }
 }
 
 .cta{
     position:relative;
-    // background-color: var(--color-primary);
-    // min-height: 50vh;
     z-index: 1;
     display: flex;
     align-items: flex-end;
