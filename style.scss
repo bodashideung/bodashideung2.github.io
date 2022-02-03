@@ -230,9 +230,10 @@ nav{
     .list-thumb{
         position: relative;
         width: 100%;
-        min-height: 100vh;
+        min-height: 130vh;
         background: var(--color-primary);
-        // overflow: hidden;
+        display: flex;
+        justify-content: center;
 
         .thumb{
             height: 28em;
@@ -241,12 +242,12 @@ nav{
             padding-bottom: 10em;
             padding-left: 2em;
             padding-right: 2em;
+            z-index: 2;
 
             a{
                 display: block;
                 
                 img{
-                    // height: 28em;
                     width: 100%;
                     object-fit: cover;
                     background-size: cover;
@@ -286,7 +287,7 @@ nav{
 
 footer{
     width: 100%;
-    height: 50vh;
+    min-height: 30vh;
     background-color: var(--color-primary);
     padding: 10em 0 0 0;
     position: relative;
@@ -300,27 +301,35 @@ footer{
         bottom: 5em;
         padding-bottom:5em;
         padding-left: 12em;
+        padding-right:10em;
         position: absolute;
+        
         
     }
 }
 
 .cta{
     position:relative;
-    background-color: var(--color-primary);
+    // background-color: var(--color-primary);
+    // min-height: 50vh;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-top: 4.5em;
+    
   
 
     .btn-cta{
-        position: absolute;
         color: var(--color-text);
         font-family: var(--ff-pg);
-        bottom: -13em;
+        bottom: 0em;
         left: 7.5em;
         text-transform: uppercase;
         letter-spacing: .19em;
         border: 1px solid white;
         padding: 1em 2em;
-        
+       
         &:hover {
            background-color: var(--color-text);
         }

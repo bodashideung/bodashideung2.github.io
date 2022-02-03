@@ -182,8 +182,10 @@ nav ul li {
 .container .list-thumb {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 130vh;
   background: var(--color-primary);
+  display: flex;
+  justify-content: center;
 }
 .container .list-thumb .thumb {
   height: 28em;
@@ -192,6 +194,7 @@ nav ul li {
   padding-bottom: 10em;
   padding-left: 2em;
   padding-right: 2em;
+  z-index: 2;
 }
 .container .list-thumb .thumb a {
   display: block;
@@ -223,7 +226,7 @@ nav ul li {
 
 footer {
   width: 100%;
-  height: 50vh;
+  min-height: 30vh;
   background-color: var(--color-primary);
   padding: 10em 0 0 0;
   position: relative;
@@ -237,18 +240,22 @@ footer p {
   bottom: 5em;
   padding-bottom: 5em;
   padding-left: 12em;
+  padding-right: 10em;
   position: absolute;
 }
 
 .cta {
   position: relative;
-  background-color: var(--color-primary);
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-top: 4.5em;
 }
 .cta .btn-cta {
-  position: absolute;
   color: var(--color-text);
   font-family: var(--ff-pg);
-  bottom: -13em;
+  bottom: 0em;
   left: 7.5em;
   text-transform: uppercase;
   letter-spacing: 0.19em;
