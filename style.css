@@ -352,21 +352,21 @@ footer .nav-social-media .instagram {
 }
 @-webkit-keyframes introHead {
   from {
-    transform: translateY(-100%);
+    transform: scale(0);
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    transform: sclae(1);
     opacity: 1;
   }
 }
 @keyframes introHead {
   from {
-    transform: translateY(-100%);
+    transform: scale(0);
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    transform: sclae(1);
     opacity: 1;
   }
 }
