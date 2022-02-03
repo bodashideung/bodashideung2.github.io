@@ -22,6 +22,9 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  -webkit-animation: introHead 1s ease-in-out forwards;
+          animation: introHead 1s ease-in-out forwards;
+  opacity: 0;
 }
 header h1 {
   color: var(--color-text);
@@ -114,11 +117,16 @@ nav ul li {
   background-size: cover;
   right: 0;
   top: 9em;
+  -webkit-animation: introLoad 1s ease-in-out;
+          animation: introLoad 1s ease-in-out;
 }
 .hero .container .hero-title {
   max-width: 100vw;
   max-height: 100vh;
   padding: 6em 2em;
+  -webkit-animation: moveText 2s ease-in-out 0.2s forwards;
+          animation: moveText 2s ease-in-out 0.2s forwards;
+  opacity: 0;
 }
 .hero .container .hero-title h1 {
   font-family: var(--ff-header);
@@ -137,6 +145,8 @@ nav ul li {
   display: flex;
   gap: 0.8em;
   position: relative;
+  -webkit-animation: introMedia 1s ease-in-out;
+          animation: introMedia 1s ease-in-out;
 }
 .hero .container .nav-social-media .link-socmed {
   width: 1.4em;
@@ -162,6 +172,12 @@ nav ul li {
   font-size: 0.6em;
   letter-spacing: 0.8em;
   color: var(--color-secondary);
+  -webkit-animation: introScroll 1s ease-in-out;
+          animation: introScroll 1s ease-in-out;
+}
+.hero .container .cta-scroll span {
+  -webkit-animation: ctaScroll 1s ease-in-out infinite;
+          animation: ctaScroll 1s ease-in-out infinite;
 }
 
 .container .content-title {
@@ -308,5 +324,83 @@ footer p {
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+@-webkit-keyframes introHead {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes introHead {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes introMedia {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: sclae(1);
+    opacity: 1;
+  }
+}
+@keyframes introMedia {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: sclae(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes introScroll {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: sclae(1);
+    opacity: 1;
+  }
+}
+@keyframes introScroll {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: sclae(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ctaScroll {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes ctaScroll {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
   }
 }/*# sourceMappingURL=style.css.map */
