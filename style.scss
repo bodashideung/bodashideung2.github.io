@@ -240,7 +240,7 @@ nav{
     .list-thumb{
         position: relative;
         width: 100%;
-        min-height: 132.8vh;
+        height:clamp(132vh,300vw,180vh);
         background: var(--color-primary);
         display: flex;
         justify-content: center;
@@ -416,12 +416,12 @@ footer{
 
 @keyframes introHead{
     from{
-        transform: scale(0);
+        transform: translateY(-100%);
         opacity: 0;
     }
 
     to{
-        transform: sclae(1);
+        transform: translateY(0);
         opacity: 1;
     }
 }
