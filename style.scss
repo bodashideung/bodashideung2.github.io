@@ -175,7 +175,7 @@ nav{
                 width: 1.4em;
                 height: 1.4em;
                 position: absolute;
-                bottom: 3em;
+                bottom: 2em;
             }
 
             .gmail{
@@ -209,7 +209,7 @@ nav{
 .container{
 
     .content-title{
-        padding: 4em 2em 9em 2em;        
+        padding: 5em 2em 10em 2em;        
 
 
         h1{
@@ -228,31 +228,33 @@ nav{
     }
 
     .list-thumb{
-        // display: flex;
-        // gap: 1.5em;
         position: relative;
-        padding: 2em 2em;
         width: 100%;
         min-height: 100vh;
         background: var(--color-primary);
+        // overflow: hidden;
 
         .thumb{
-            // width: 100%;
             height: 28em;
+            width: 100%;
             position: absolute;
-            // padding-bottom: 6em;
-            background-size: cover;
-            object-fit: cover;
+            padding-bottom: 10em;
+            padding-left: 2em;
+            padding-right: 2em;
 
             a{
-
+                display: block;
+                
                 img{
-                    height: 25em;
+                    // height: 28em;
+                    width: 100%;
+                    object-fit: cover;
+                    background-size: cover;
                 }
             }
 
             p{
-                 font-family: var(--ff-pg);
+                font-family: var(--ff-pg);
                 font-size: .5em;
                 color: var(--color-text);
                 padding-top: 2em;
@@ -263,7 +265,7 @@ nav{
             hr{
                 width: 40%;
                 margin-top: 1em;
-            }
+             }
         }
 
         .first{
@@ -274,9 +276,9 @@ nav{
             top: 28em;
         }
 
-        .third{
-            top: 55em;
-        }
+        // .third{
+        //     top: 55em;
+        // }
     }
 
 
@@ -284,16 +286,49 @@ nav{
 
 footer{
     width: 100%;
+    height: 50vh;
     background-color: var(--color-primary);
     padding: 10em 0 0 0;
+    position: relative;
+    z-index: -1;
 
     p{
         color: var(--color-text);
         font-family: var(--ff-pg);
         font-size: .5em;
         text-align: center;
-        position: relative;
-        bottom: 2em;
+        bottom: 5em;
+        padding-bottom:5em;
+        padding-left: 12em;
+        position: absolute;
+        
+    }
+}
+
+.cta{
+    position:relative;
+    background-color: var(--color-primary);
+  
+
+    .btn-cta{
+        position: absolute;
+        color: var(--color-text);
+        font-family: var(--ff-pg);
+        bottom: -13em;
+        left: 7.5em;
+        text-transform: uppercase;
+        letter-spacing: .19em;
+        border: 1px solid white;
+        padding: 1em 2em;
+        
+        &:hover {
+           background-color: var(--color-text);
+        }
+
+        &:hover a{
+            color: var(--color-primary);
+        }
+
     }
 }
 
