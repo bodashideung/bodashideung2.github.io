@@ -22,9 +22,6 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  -webkit-animation: introHead 2s ease-in-out forwards;
-          animation: introHead 2s ease-in-out forwards;
-  opacity: 0;
 }
 header h1 {
   color: var(--color-text);
@@ -32,6 +29,9 @@ header h1 {
   font-weight: bold;
   background-color: var(--color-primary);
   font-family: var(--ff-header);
+  -webkit-animation: introHead 2s ease-in-out forwards;
+          animation: introHead 2s ease-in-out forwards;
+  opacity: 0;
 }
 header .logo {
   padding-top: 2em;
@@ -50,9 +50,8 @@ nav {
   height: 100vh;
   background-color: var(--color-primary);
   position: fixed;
-  transform: translateY(-100%);
+  transform: translateY(-800px);
   transition: 0.5s ease-in-out;
-  opacity: 0.5;
   z-index: 9999;
 }
 nav ul {
@@ -73,7 +72,7 @@ nav ul li {
 
 .open-nav {
   transform: translateY(0);
-  opacity: 1;
+  position: fixed;
   z-index: 9999;
 }
 

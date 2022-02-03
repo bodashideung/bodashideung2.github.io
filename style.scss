@@ -37,8 +37,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    animation: introHead 2s ease-in-out forwards;
-    opacity: 0;
+    
     
    
     h1{
@@ -47,6 +46,8 @@ header{
         font-weight: bold;
         background-color: var(--color-primary);
         font-family: var(--ff-header);
+        animation: introHead 2s ease-in-out forwards;
+        opacity: 0;
 
     }
 
@@ -68,9 +69,8 @@ nav{
     height: 100vh;
     background-color: var(--color-primary);
     position: fixed;
-    transform: translateY(-100%);
+    transform: translateY(-800px);
     transition: .5s ease-in-out;
-    opacity: .5;
     z-index: 9999;
 
     ul{
@@ -93,7 +93,7 @@ nav{
 
 .open-nav{
     transform: translateY(0);
-    opacity: 1;
+    position: fixed;
     z-index: 9999;
 }
 
@@ -124,7 +124,6 @@ nav{
 
 .hero{
     width: 100%;
-    // min-height: 100vh;
 
     .container{
         width: 100%;
@@ -171,7 +170,6 @@ nav{
 
         .nav-social-media{
             width: 100%;
-            // max-height: 10%;
             display: flex;
             gap: .8em;
             position: relative;
