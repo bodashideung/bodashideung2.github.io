@@ -1,0 +1,212 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --ff-title: 'Cormorant', serif ;
+    --ff-pg: 'Fira Sans', sans-serif;
+
+    --color-primary: #0c0c0c;
+    --color-secondary: rgb(131, 131, 131) ;
+    --color-text: #fff;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // position: relative;
+   
+
+   
+    h1{
+        color: var(--color-text);
+        font-size: 1rem;
+        font-weight: medium;
+        background-color: var(--color-primary);
+        font-family: var(--ff-header);
+        animation: introHead 2s ease-in-out forwards;
+        // opacity: 0;
+
+    }
+
+    .logo{
+    padding: 1.5rem 1.2rem;
+    }
+
+
+    a{
+        color: var(--color-text);
+        text-decoration: none;
+    }
+
+
+
+    nav{
+        width: 100%;
+        height: 100vh;
+        background-color: black ;
+        position: absolute;
+        z-index: 9999;
+        display: grid;
+        place-items: center;
+        transform: translateY(-100%);
+        transition: .5s ease-in-out;
+
+        ul{
+            list-style-type: none;
+           
+            li{
+               color: wheat;
+               font-family: var(--ff-pg);
+               text-align: center;
+               text-transform: uppercase;
+               padding-bottom: 1em;
+               letter-spacing: .3em;
+           }
+        }
+    }
+
+    .btn-close{
+        position: fixed;
+        width: 20px;
+        top: 1.8em;
+        right: 1.8em;
+        width: 2.5em;
+        height: 2.5em;
+        cursor: pointer;
+    
+        path{
+            fill: white;
+        }
+    }
+    
+
+    .btn-menu{
+        width: 20px;
+        position: absolute;
+        right: 1.8rem;
+        cursor: pointer;
+        top: 1.8rem;
+    }
+
+}
+
+.open-nav{
+    transform: translateY(0);
+    position: fixed;
+    z-index: 9999;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.title{
+    margin: 3em 3em;
+    text-transform: uppercase;
+    font-family: var(--ff-title);
+    font-size: .8rem;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+
+
+
+
+
+.artwork{
+    width: 100%;
+    display: grid;
+
+    hr{
+        margin: 2rem auto;
+        width: 80%;
+    }
+
+    // &:hover .artwork__thumb {
+    //     transform: translateX(-200%);
+    // }
+    
+
+        &__thumb{
+            width: 80%;
+            margin: 0 auto;
+            transition: 1s ease-in-out;
+            cursor: pointer;
+
+            img{
+                width: 100%;
+                cursor: pointer;
+            }
+
+        }
+
+
+        .artwork__full{
+            width: 100%;
+            min-height: 130vh;
+            position:absolute;
+            background-color: white;
+            transform: translateY(-100%);
+            transition: 1s ease-in-out;
+            z-index: 99;
+            top: 0;
+            overflow: auto;
+        
+            img{
+                width: 100%;
+                background-size: cover;
+                object-fit: cover;
+            }
+        
+            .artwork__title{
+                padding: 0 2rem;
+                color: var(--color-primary);
+            }
+        
+            .artwork__desc{
+                padding: 1rem 2rem;
+                font-family: var(--ff-pg);
+                line-height: 1.7rem;
+                color: var(--color-secondary);
+            }
+            
+            hr{
+                width: 12%;
+                padding: .8rem 0;
+                color: var(--color-secondary);
+            }
+        
+            svg{
+                width:20px;
+                margin: .8rem 0 .8rem .8rem;
+                cursor: pointer;
+        
+                path{
+                    fill: var(--color-secondary);
+                }
+            }
+        }
+        
+        
+        .open-full{
+            transform: translateY(0);
+            position: fixed;
+            z-index: 9999;
+            overflow: scroll;
+        }
+
+    
+    }
+
+
+}
