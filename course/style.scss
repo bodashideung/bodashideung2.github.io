@@ -1,0 +1,87 @@
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'monserrat', sans-serif;
+}
+
+.container{
+    background-color: hsl(348, 79%, 28%);
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding: 0 2em;
+
+    .hero{
+        animation: introLoad 2s ease-in-out forwards;
+    }
+
+    .page{
+        display: grid;
+        font-size: 2em;
+        justify-content: center;
+        align-content: center;
+        color: hsl(0, 0%, 0%);
+        background-color: hsl(348, 79%, 30%);
+        width: 200px;
+        height: 80px;
+        border-radius: 40px;
+        border: 2px solid hsl(0, 0%, 5%);
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        padding-left: .5em;
+    }
+
+    .drp-sd{
+        cursor: pointer;
+        transition: transform 1s ease-in;
+        // filter: drop-shadow(-1px -1px 50px hsl(348, 79%, 35%));
+        box-shadow: -1px -1px 15px -2px hsl(348, 79%, 30%), -2px -1px 60px -2px hsl(348, 79%, 38%), inset 2px 1px 5px -1px hsl(348, 79%, 10%),
+        inset -3px -1px 6px -1px hsl(348, 79%, 20%), 1px 2px 6px -1px hsl(348, 79%, 20%);
+
+
+        &:hover{
+           box-shadow: 3px 4px 10px -15px hsl(199, 69%, 20%), 2px 3px 15px -3px hsl(187, 84%, 41%),
+            -4px -3px 20px -5px hsl(315, 90%, 40%), -4px -3px 20px 3px hsl(308, 85%, 48%),
+            -8px -3px 100px 0px rgba(238, 43, 212, 1),
+            inset -3px 1px 10px -5px hsl(315, 90%, 50%),  inset 3px -3px 10px -10px hsl(189, 70%, 34%) ;
+
+            text-shadow: 1px 0px 3px hsl(187, 78%, 30%),   -1px -2px 3px hsl(315, 90%, 30%);
+        }
+    }
+
+    h1{
+        font-size: clamp(2em, 7vh, 7em);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        letter-spacing: .3em;
+        padding-bottom: .5em;
+        // text-shadow: 0 0 4px hsl(348, 79%, 10%), 0 0 8px hsl(348, 79%, 40%);
+    }
+
+    p{
+        padding-bottom: 2.7em;
+        line-height: 1.6em;
+        color: hsl(0, 100%, 4%);
+    }
+
+}
+
+@keyframes introLoad{
+    from{
+        transform: translateX(-500px) rotateY(200deg);
+    }
+
+    to{
+        transform: translateX(0) rotateY(0);
+        opacity: 1;
+    }
+}
